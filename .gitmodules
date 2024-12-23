@@ -1,0 +1,6 @@
+[submodule "sort"]
+	path = sort
+	url = https://github.com/abewley/sort.git
+[submodule "mot3d"]
+	path = mot3d
+	url = https://github.com/cvlab-epfl/mot3d.git
