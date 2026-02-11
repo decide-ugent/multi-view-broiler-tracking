@@ -156,8 +156,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset_root",
         type=str,
-        default="/home/thorsten/Multi-View-Broiler-Tracking-Everything/MVBroTrack/",
-        help="Path to the MVBroTrack root folder.",
+        default="MVBroTrack",
+        help="Path to the MVBroTrack root folder (relative to the current working directory or absolute).",
     )
     parser.add_argument(
         "--yolo_labels_folder",
@@ -167,9 +167,13 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    dataset_root_path = Path(args.dataset_root)
+    # Convert provided path to an absolute path relative to the current working directory
+    dataset_root_path = Path(args.dataset_root).resolve()
     if not dataset_root_path.is_dir():
-        raise SystemExit(f"Dataset root directory does not exist: {dataset_root_path}")
+        # raise SystemExit(f"Dataset root directory does not exist: {dataset_root_path}")
+        print("Dataset root directory does not exist.")
+        print(f"Checked absolute path: {dataset_root_path}")
+        raise SystemExit(1)
 
     dataset_root = str(dataset_root_path)
 

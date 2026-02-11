@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 from typing import List, Tuple, Optional
 import cv2
+import os
 
 def load_yolo_labels(
     label_file: Path, img_width: int, img_height: int
@@ -61,17 +62,24 @@ def main() -> None:
         description="Visualize YOLO labels on images from the Single-View-Detection dataset."
     )
     parser.add_argument(
-        "--dataset_dir",
+        "--dataset_root",
         type=str,
-        default="/home/thorsten/Multi-View-Broiler-Tracking-Everything/MVBroTrack/Single-View-Detection/",
-        help="Path to the Single-View-Detection folder containing images and YOLO label .txt files.",
+        default="MVBroTrack",
+        help="Path to the MVBroTrack root folder (relative to the current working directory or absolute).",
     )
 
     args = parser.parse_args()
 
-    dataset_dir = Path(args.dataset_dir)
-    if not dataset_dir.is_dir():
-        raise SystemExit(f"Dataset directory does not exist: {dataset_dir}")
+    # Convert provided path to an absolute path relative to the current working directory
+    dataset_root_path = Path(args.dataset_root).resolve()
+    if not dataset_root_path.is_dir():
+        # raise SystemExit(f"Dataset directory does not exist: {dataset_dir}")
+        print("Dataset directory does not exist.")
+        print(f"Checked absolute path: {dataset_root_path}")
+        raise SystemExit(1)
+
+    # Build the Single-View-Detection directory as an absolute Path
+    dataset_dir = dataset_root_path / "Single-View-Detection"
 
     # Fixed list of image extensions
     exts = (".jpg", ".png", ".jpeg")
