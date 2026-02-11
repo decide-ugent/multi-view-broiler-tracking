@@ -1,6 +1,6 @@
 # Multi-View Broiler Tracking
 
-![Multi-View Tracking](visualisations/camera_setup_animation.gif)
+![Multi-View Tracking](visualizations/camera_setup_animation.gif)
 
 Welcome to the repository for **Multi-camera Detection and Tracking for Individual Broiler Monitoring**. This project is designed to advance poultry research by offering robust multi-view tracking systems that improve upon traditional single-camera methods. The proposed pipeline enables comprehensive localization and tracking of broilers over their entire lifespan, offering a significant step forward in animal welfare monitoring and research.
 
@@ -11,6 +11,8 @@ Visualization scripts are available to explore different subsets of the MVBroTra
 - `visualize_ground_plane_tracking_dataset.py` for ground-plane tracks
 
 These scripts illustrate how camera calibrations are loaded and document the formats of bounding boxes and tracking annotations used in the dataset.
+
+The following packages are required for the visualization: opencv-python, tqdm, colorhash, pandas
 
 **Dataset download**: wget -O MVBroTrack_v2.zip https://cloud.ilabt.imec.be/index.php/s/kECieoDK79Ms7ck/download
 
@@ -74,12 +76,12 @@ The MVBroTrack dataset includes annotations for single-view detection, multi-vie
 |                         | **Total**| **4356x4**   | **816**  | -                    | -                      | **816**                |
 
 ### 📸 Single-view Ground Truth Detections
-![Single-view GT detections](visualisations/bounding_box_example.png)
+![Single-view GT detections](visualizations/bounding_box_example.png)
 
 ### 🎥 Multi-View Ground Truth Tracks Example
 Below we show one camera view out of the four synchronized views, with ground plane tracks visualized using up to 12 seconds of track history.
 
-![Multi-View GT tracks](visualisations/dataset_tracking_example.gif)
+![Multi-View GT tracks](visualizations/dataset_tracking_example.gif)
 
 ---
 
