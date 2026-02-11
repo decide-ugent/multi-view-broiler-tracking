@@ -4,6 +4,34 @@
 
 Welcome to the repository for **Multi-camera Detection and Tracking for Individual Broiler Monitoring**. This project is designed to advance poultry research by offering robust multi-view tracking systems that improve upon traditional single-camera methods. The proposed pipeline enables comprehensive localization and tracking of broilers over their entire lifespan, offering a significant step forward in animal welfare monitoring and research.
 
+## 🖼️ Visualization & Dataset Access
+Visualization scripts are available to explore different subsets of the MVBroTrack dataset:
+- `visualize_single_view_dataset.py` for single-view detections
+- `visualize_ground_plane_detection_dataset.py` for ground-plane detections
+- `visualize_ground_plane_tracking_dataset.py` for ground-plane tracks
+
+These scripts illustrate how camera calibrations are loaded and document the formats of bounding boxes and tracking annotations used in the dataset.
+
+**Dataset download**: wget -O MVBroTrack_v2.zip https://cloud.ilabt.imec.be/index.php/s/kECieoDK79Ms7ck/download
+
+## Reference 
+If you found this dataset or the accompanying code useful, please cite the following paper:
+
+```bibtex
+@article{CARDOEN2025110435,
+  title   = {Multi-camera detection and tracking for individual broiler monitoring},
+  journal = {Computers and Electronics in Agriculture},
+  volume  = {237},
+  pages   = {110435},
+  year    = {2025},
+  issn    = {0168-1699},
+  doi     = {https://doi.org/10.1016/j.compag.2025.110435},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0168169925005411},
+  author  = {Thorsten Cardoen and Patricia Soster {de Carvalho} and Gunther Antonissen and Frank A.M. Tuyttens and Sam Leroux and Pieter Simoens},
+  keywords = {Multi-camera detection, Object tracking, Broiler welfare monitoring, Sensor fusion}
+}
+```
+
 ## 🔍 Overview
 This repository will host:
 - **Code**:
@@ -18,6 +46,13 @@ This repository will host:
 Both the code and dataset are currently being prepared and will be released soon.
 
 ---
+
+## Installation
+
+```bash
+conda create -n mvbroilertracking python=3.10
+./install.sh
+```
 
 ## 📚 MVBroTrack Dataset
 The MVBroTrack dataset includes annotations for single-view detection, multi-view detection, and multi-view tracking tasks, covering different stages of broiler growth. Below is a summary of the dataset:

@@ -1,0 +1,11 @@
+numpy
+pandas
+ultralytics
+scikit-image
+filterpy
+motmetrics
+PyYAML
+similaritymeasures
+matplotlib==3.2.1
+wandb
+colorhash
