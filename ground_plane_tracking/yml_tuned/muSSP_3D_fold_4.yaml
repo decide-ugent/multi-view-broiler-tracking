@@ -1,0 +1,13 @@
+bb_threshold: 0.51
+dist_multiplier: 1.2509741483151655
+length: 20
+max_dist: 449
+max_jump_pass1: 3
+max_jump_pass2: 18
+min_dist: 17
+remove_threshold: 408
+sigma_distance: 9
+sigma_motion: 50
+th_length: 7
+val_mota: 0.8126758447376328
+weight_source_sink: 0.1

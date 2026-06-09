@@ -1,0 +1,10 @@
+MIN_HITS: 3
+MAX_AGE: 15
+IOU_THRESHOLD: 0.7
+
+BB_SIZE: 20
+
+remove_threshold: 408
+min_dist: 17
+max_dist: 449
+bb_threshold: 0.51

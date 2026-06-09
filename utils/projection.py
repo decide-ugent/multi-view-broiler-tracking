@@ -66,7 +66,18 @@ def project_bb_to_ground_plane(xmin, ymin, xmax, ymax, calib, min_dist, max_dist
     center_dist = np.linalg.norm(projected_points[0] - cam_loc/10)
     return projected_points, center_dist
 
-def project_2d_points_to_3d_with_distortion(points, cameraMatrix, extrinsic_matrix, scale, distortion_coeffs):
+def project_2d_points_to_3d_with_distortion(points, cameraMatrix, extrinsic_matrix=None, scale=100, distortion_coeffs=None):
+    """Project 2D points to scaled ground-plane coordinates.
+
+    Supports two call styles:
+    - Public / modular: ``(points, cameraMatrix, extrinsic_matrix, scale, distortion_coeffs)`` with arrays.
+    - Training pipeline: ``(points, calib_dict, scale=...)`` where *cameraMatrix* is a calibration dict.
+    """
+    if isinstance(cameraMatrix, dict) and extrinsic_matrix is None:
+        calib = cameraMatrix
+        cameraMatrix = calib['cameraMatrix']
+        extrinsic_matrix = calib['extrinsic_matrix']
+        distortion_coeffs = calib['distCoeffs']
 
     # print(points.shape)
     # print(points)

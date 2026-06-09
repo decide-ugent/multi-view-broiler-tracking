@@ -1,0 +1,13 @@
+BB_THRESHOLD: 0.51
+IOU_THRESHOLD: 0.7
+MAX_AGE: 19
+MIN_HITS: 3
+R_eucl: 30
+R_multiplier: 0.9106331706488482
+avg_max_distance: 378
+length_threshold: 5
+max_dist: 449
+max_gap: 35
+min_dist: 17
+shift_factor_multiplier: 0.2776797371974959
+val_mota: 0.8197332807420807

@@ -1,0 +1,9 @@
+BB_SIZE: 6.595996606058351
+IOU_THRESHOLD: 0.7
+MAX_AGE: 26
+MIN_HITS: 3
+bb_threshold: 0.51
+max_dist: 449
+min_dist: 17
+remove_threshold: 408
+val_mota: 0.7953611133874183

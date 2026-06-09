@@ -11,6 +11,8 @@ import pandas as pd
 from ground_plane_tracking.data_loading import load_samples
 from utils.projection import load_calibration
 
+DEFAULT_DATASET_ROOT = Path(__file__).resolve().parent.parent / "DATA" / "MVBroTrack"
+
 
 def _track_color(track_id, cache):
     tid = int(track_id)
@@ -284,7 +286,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--dataset_root",
         type=str,
-        default="MVBroTrack",
+        default=str(DEFAULT_DATASET_ROOT),
         help="Path to the MVBroTrack root folder (relative to the current working directory or absolute).",
     )
     parser.add_argument(

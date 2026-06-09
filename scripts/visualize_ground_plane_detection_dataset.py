@@ -1,11 +1,15 @@
+import argparse
 import os
+from pathlib import Path
+
+import colorhash
 import cv2
 import numpy as np
-import argparse
-import colorhash
-from pathlib import Path
+
 from ground_plane_detection.data_loading import load_samples
 from utils.projection import load_calibration
+
+DEFAULT_DATASET_ROOT = Path(__file__).resolve().parent.parent / "DATA" / "MVBroTrack"
 
 # Global variables
 show_bounding_boxes = True
@@ -156,7 +160,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset_root",
         type=str,
-        default="MVBroTrack",
+        default=str(DEFAULT_DATASET_ROOT),
         help="Path to the MVBroTrack root folder (relative to the current working directory or absolute).",
     )
     parser.add_argument(

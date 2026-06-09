@@ -1,11 +1,23 @@
+# Core (training + tracking + dataset scripts)
 numpy
 pandas
-ultralytics
+opencv-python
+tqdm
 scikit-image
 filterpy
 motmetrics
 PyYAML
 similaritymeasures
-matplotlib==3.2.1
-wandb
+matplotlib>=3.5
+scipy
+scikit-learn
 colorhash
+ultralytics
+torch
+
+# Optional experiment logging (mvt_main / tuning)
+wandb
+
+# Plotly used in multi-view detection reporting utilities
+plotly
+kaleido==0.2.1

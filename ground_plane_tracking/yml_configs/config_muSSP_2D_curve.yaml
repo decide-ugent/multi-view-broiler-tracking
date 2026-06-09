@@ -1,0 +1,24 @@
+sigma_distance: 11
+max_jump_pass1: 8
+max_jump_pass2: 10
+length: 20
+th_length: 8
+max_distance: 23
+
+weight_source_sink: 0.1
+sigma_box_size: 0.3
+sigma_motion: 50
+
+# BB_THRESHOLD: 0.45
+BB_THRESHOLD: 0.51
+min_dist: 17
+max_dist: 449
+
+avg_max_distance: 380
+length_threshold: 10
+R_multiplier: 1 # will change the R value depending on the chicken age
+shift_factor_multiplier: 0.3
+max_gap: 30
+
+R_eucl: 30
+

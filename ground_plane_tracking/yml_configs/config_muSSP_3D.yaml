@@ -1,0 +1,14 @@
+sigma_distance: 11
+max_jump_pass1: 6
+max_jump_pass2: 15
+length: 18
+th_length: 14
+dist_multiplier: 1.5 # will change the max distance depending on the chicken age
+
+sigma_motion: 50
+weight_source_sink: 0.1
+
+remove_threshold: 408
+min_dist: 17
+max_dist: 449
+bb_threshold: 0.51

@@ -33,7 +33,7 @@ def load_samples(root_dataset_dir, selected_yolo_dets='yolo11x_dets', per_sample
     # per sample split amount -> every sample is 30 seconds long, spliting by 6 will result in 5 seconds per split
 
     samples = []
-    # initial laoding of the samples of ~30 seconds
+    # Initial loading of the ~30 second samples.
     for folder in os.listdir(root_dataset_dir):
         if folder.startswith('sample_'):
             max_valid_frame_for_sample = 1000000

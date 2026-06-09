@@ -1,8 +1,11 @@
 import argparse
+import os
 from pathlib import Path
 from typing import List, Tuple, Optional
+
 import cv2
-import os
+
+DEFAULT_DATASET_ROOT = Path(__file__).resolve().parent.parent / "DATA" / "MVBroTrack"
 
 def load_yolo_labels(
     label_file: Path, img_width: int, img_height: int
@@ -64,7 +67,7 @@ def main() -> None:
     parser.add_argument(
         "--dataset_root",
         type=str,
-        default="MVBroTrack",
+        default=str(DEFAULT_DATASET_ROOT),
         help="Path to the MVBroTrack root folder (relative to the current working directory or absolute).",
     )
 
